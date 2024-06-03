@@ -18,5 +18,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\TechJobsOOAutoGraded6\TechJobsOOAutoGraded6.csproj" />
+    <!-- <ProjectReference Include="..\TechJobsOO.Tests\TechJobsOO.Tests.csproj" /> -->
   </ItemGroup>
 </Project>

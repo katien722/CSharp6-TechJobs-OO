@@ -8,7 +8,16 @@ namespace TechJobsOOAutoGraded6
             public Location EmployerLocation { get; set; }
             public PositionType JobType { get; set; }
             public CoreCompetency JobCoreCompetency { get; set; }
-    public Job(string name, Employer employerName, Location employerLocation, PositionType jobType, CoreCompetency jobCoreCompetency)
+
+            public int Id { get; }
+            private static int nextId = 1;
+
+            public Job()
+        {
+            Id = nextId;
+            nextId++;
+        }
+    public Job(string name, Employer employerName, Location employerLocation, PositionType jobType, CoreCompetency jobCoreCompetency) : this()
         {
             Name = name;
             EmployerName = employerName;
@@ -18,16 +27,6 @@ namespace TechJobsOOAutoGraded6
         
         }
 
-
-            public int Id { get; }
-            private static int nextId = 1;
-
-            public string Value { get; set; }
-            public Job()
-        {
-            Id = nextId;
-            nextId++;
-        }
 
         public override bool Equals(object? obj)
         {
