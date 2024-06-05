@@ -87,7 +87,7 @@ namespace TechJobsOO.Tests
             Assert.AreEqual(testJob1.Name, "Product tester", "Testing Job Name");
             Assert.AreEqual(testJob1.EmployerName.ToString(), "ACME", "Testing EmployerName Value");
             Assert.AreEqual(testJob1.EmployerLocation.ToString(), "Desert", "Testing EmployerLocation Value");
-            Assert.AreEqual(testJob1.JobType.ToString(), "Quality control", "Testing JobType Value");
+            Assert.AreEqual(testJob1.PositionType.ToString(), "Quality control", "Testing JobType Value");
             Assert.AreEqual(testJob1.JobCoreCompetency.ToString(), "Persistence", "Testing JobCoreCompetency Value");
             Assert.AreNotEqual(testJob1.Id, testJob2.Id, "Job objects should have unique ids");
         }
