@@ -4,9 +4,9 @@ namespace TechJobsOOAutoGraded6
 	public class Job
 	{
             public string Name { get; set; }
-             public Employer EmployerName { get; set; }
+            public Employer EmployerName { get; set; }
             public Location EmployerLocation { get; set; }
-            public PositionType JobType { get; set; }
+            public PositionType PositionType { get; set; }
             public CoreCompetency JobCoreCompetency { get; set; }
 
             public int Id { get; }
@@ -17,12 +17,12 @@ namespace TechJobsOOAutoGraded6
             Id = nextId;
             nextId++;
         }
-    public Job(string name, Employer employerName, Location employerLocation, PositionType jobType, CoreCompetency jobCoreCompetency) : this()
+    public Job(string name, Employer employerName, Location employerLocation, PositionType positionType, CoreCompetency jobCoreCompetency) : this()
         {
             Name = name;
             EmployerName = employerName;
             EmployerLocation = employerLocation;
-            JobType = jobType;
+            PositionType = positionType;
             JobCoreCompetency = jobCoreCompetency;
         
         }
@@ -42,8 +42,37 @@ namespace TechJobsOOAutoGraded6
 
         // TODO: Task 5: Generate custom ToString() method.
         //Until you create this method, you will not be able to print a job to the console.
+        public override string ToString()
+        {
+            if(Name.ToString()== "" || Name == null)
+            {
+                Name = "Data not available";
+            }
+             if(EmployerName.ToString()== "" || EmployerName == null)
+            {
+                EmployerName.Value = "Data not available";
+            }
+            if(EmployerLocation.ToString()== "" || EmployerLocation == null)
+            {
+                EmployerLocation.Value = "Data not available";
+            }
+            if(PositionType.ToString()== "" || PositionType == null)
+            {
+                PositionType.Value = "Data not available";
+            }
+            if(JobCoreCompetency.ToString()== "" || JobCoreCompetency == null)
+            {
+                JobCoreCompetency.Value = "Data not available";
+            }
+
+            return Environment.NewLine + "ID: " + Id + Environment.NewLine +
+            "Name: " + Name + Environment.NewLine +
+            "Employer: " + EmployerName + Environment.NewLine +
+            "Location: " + EmployerLocation + Environment.NewLine + 
+            "Position Type: " + PositionType + Environment.NewLine +
+            "Core Competency: " + JobCoreCompetency + Environment.NewLine;  
+        }
 
     }
     }
-
 
