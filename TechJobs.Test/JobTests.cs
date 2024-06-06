@@ -67,24 +67,17 @@ namespace TechJobs.Tests
 public void TestToStringStartsAndEndsWithNewLine()
 
 { 
-    string expected = Environment.NewLine + "ID: " + "23" + Environment.NewLine +
-             "Name: " + "Product tester" + Environment.NewLine + 
-            "Employer: " + "ACME" + Environment.NewLine +
-            "Location: " + "Desert" + Environment.NewLine + 
-            "Position Type: " + "Quality Control" + Environment.NewLine +
-            "Core Competency: " + "Persistence" + Environment.NewLine;
-
+           
     string actual = job3.ToString();
     string message = "Returned string must start and end with a blank line";
 
-    Assert.AreEqual(expected, actual, message);
-    Assert.IsTrue(expected.StartsWith(Environment.NewLine));
-    Assert.IsTrue(expected.EndsWith(Environment.NewLine));
+    Assert.IsTrue(actual.StartsWith(Environment.NewLine), message);
+    Assert.IsTrue(actual.EndsWith(Environment.NewLine), message);
 }
 [TestMethod]
 public void TestToStringContainsCorrectLabelsAndData()
 {
-    string expected = Environment.NewLine + "ID: " + "13" + Environment.NewLine + //proper id needed
+    string expected = Environment.NewLine + "ID: " + "13" + Environment.NewLine + 
             "Name: " + "Product tester" + Environment.NewLine + 
             "Employer: " + "ACME" + Environment.NewLine +
             "Location: " + "Desert" + Environment.NewLine + 
